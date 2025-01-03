@@ -1,0 +1,25 @@
+Kubernetes In one shot
+Core Concepts:
+Monolithic vs Microservices, Kubernetes architecture, set up local/AZURE VM/Minicube, Kubectl, Pods, Namespaces, Metadata, Lables, Selectors, Annotations
+
+Workloads:
+Deployments, namespaces, Statefulsets, replicasets, Jobs, Daemonsets, Cronjobs
+
+K8's Networking:
+Services, Ingress, Cluster Networking, Network policies
+
+Storage:
+Persistant Volumes, persistant Volume claims, storage classes, Configmaps, secrets
+
+Scaling and scheduling:
+HPA, VPA, Taints and Tolerations, Node Affinity, Resource Quotas,Limits, probes
+
+other Terminology and use cases in k8's:
+CNI, CSI, CRI
+Liveness probes, Readiness, Startup probes
+
+Monitoring:
+Datadog, Dynatrace, Elastic, Newrelic
+
+
+
