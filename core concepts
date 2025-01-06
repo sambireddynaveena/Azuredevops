@@ -1,0 +1,20 @@
+Monolithic vs Microservices
+
+Monolithic: 
+Everything in a single codebase (Single repository)
+All the code, frontend and backend, database..all
+
+  Good for small applications and cheap but for longer run, it would be difficult when its growing.
+Microservices:
+  Breaking down the code into small pieces.
+  Cot-effective but for loner run and large applications, it is beneficial
+easy to maintain.
+
+  Note: Kubernetes is not a microservice
+its a tool to run the microservice application
+its a microservice platform.
+
+
+Kubernetes architecture
+
+  
