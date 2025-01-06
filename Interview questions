@@ -1,0 +1,134 @@
+Azure Fundamentals:
+
+What is Application Gateway and NAT Gateway
+
+What is difference between application gatway and firewall
+
+Difference between NSG and ASG
+
+What is VNET and VNET Peering
+
+What is Vnet gateway and VPN Gateway
+
+What is site to site connection and point to site connection
+
+What is IAM and Microsoft Entra ID
+
+Docker:
+
+What is Docker and what is container
+
+Difference between Containers and VM
+
+Docker Networking
+
+Docker volumes
+
+write Dockerfile and explain each step
+
+What is multi stage Docker file and what is the advantage from it
+
+What is Distroless Image
+
+difference between CMD and Entrypoint
+
+
+Kuberenetes
+
+Difference between monolithic and microservices
+
+What is deployment and namespaces,Daemonsets, Cronjobs
+
+What are taints and Tolerations
+
+
+how you enable the communication between Pods
+
+If you want to stop the connectivity from one pod to another, how will you do it.
+
+what are CNI and CSI, CRI
+
+How you fetch the sensitive and secure data to the pods from key vault and Azure cosmos DB
+
+how you will troubleshoot the pod issues and what are the issues you have seen
+
+What is Liveness, startup, readiness probes
+
+how you will integrate monitoring for AKS
+
+what are configmaps and Secrets
+
+What is Ingress controller 
+
+What is Nginx
+
+What are the types of services
+
+What is cluter IP, Nodeport, Load balancer services
+
+difference between Load balancer and Nginx
+
+what are manifest files and helm charts
+
+
+CI/CD
+
+What are service connection and service principles
+
+How you integrate to the cloud
+
+where you store sensitive information from the pipelines during the build and release pipelines
+
+write a build configuration inlucing stages, steps, tasks, jobs
+
+Write a release pipeline with all the stages for infra and app, for multiple regions
+
+write a approval task stage in releae pipeline through YAMl
+
+Write some conditions for automation 
+
+Branches and its stratagies
+
+PR guidlines
+
+
+Monitoring
+
+How you will monitor your service
+
+what are the tools you use for Monitoring
+
+What is log Anlaytics workspace and application insights
+
+
+
+Scripting
+
+Write a script to start and stop VMSS at particular times
+
+Write a script to create a file and open it
+
+
+Project related
+
+day to day activies
+challengs you have faced
+what are your customers for your services
+
+how you will deploy an application from scratch in terms of networking, storage, database, security, fault Tolerance.
+
+
+
+
+
+
+
+How you will integrate from the pipelines
+
+
+
+
+
+
+
+
