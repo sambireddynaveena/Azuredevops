@@ -1,5 +1,7 @@
 Azure Fundamentals:
 
+What is Azure Bastion?
+
 What is Application Gateway and NAT Gateway
 
 What is difference between application gatway and firewall
@@ -118,12 +120,25 @@ what are your customers for your services
 how you will deploy an application from scratch in terms of networking, storage, database, security, fault Tolerance.
 
 
-
-
-
-
-
 How you will integrate from the pipelines
+
+
+
+Azure Fundamentals:
+
+1. What is Azure Bastion?
+What and why we need to use
+
+Azure Bastion service protects the Remotely connVirtual machine's, it allow us to close the ports for RDP (3389) and SSH (22) through the NSG, so that , 
+we can secure the Remote connections of VM much more through Bastion, Much Safer.
+
+Allowing Administrative users to connect Windows and linux virtual machines through remote connection, instead of leaving Port 3389 and 22, we can cloe them. 
+much safer to secure the server, by dissociating the Public Ip address
+
+It is Microsoft Azure Paas service
+it provides, secure RDP and SSH connections to the VM's withoud needing the Public Ip's.
+
+It itegrated wo the Firewalls and Security permiters.
 
 
 
