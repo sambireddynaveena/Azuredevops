@@ -1,0 +1,25 @@
+Basic shell commands to learn
+
+Create a VM, connect to the server (through terminal) or from the azure portal
+login to the VM(linux or windows or ubuntu...)
+
+basic shell commands
+>ls  (list all the files from the server)
+>man ls (it shows the command information, when we enter man)
+>touch examplefile.sh (creates a file)
+>vim exapmlefile2.sh(vi or vim command helps to create and open the file)
+where we can write up script in the file
+after opening
+
+#!bin/bash (shebang)
+                 { #!bin/bash or #!bin/sh or #!bin/ksh or #!bin/dash
+                     Difference between #!bin/bash  and #!bin/sh  (historically both are same to execute the script from the file, it is to redirect it but now when we use #!bin/sh all the operatin systems scripts are not executing)
+-
+-
+:q! ( it exits from the file)/   :wq!(save and exit the file)
+
+To execute the file 
+./examplefile.sh
+or
+sh examplefile.sh
+
