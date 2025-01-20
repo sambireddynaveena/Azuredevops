@@ -23,3 +23,24 @@ To execute the file
 or
 sh examplefile.sh
 
+To print the contents from the file
+>cat filename1.sh
+>pwd (present working directory)
+>cd change directory
+>cd.. (back to the previous directory)
+>mkdir directoryname(create a new directory)
+>chmod 777 filename.sh  ( 4 2 1 ( 4 to read, 2 to write, 1 to execute)) chmod 444 filename...etc
+chmod xxx ( first x for permissions to owner, second X for permissions to group, third x for permissions to everyone)
+
+>./filename.sh  or >sh filename.sh ( for execution)
+
+Note: we use shell scripting to check infrastrure maintenance and monitoring, automation, for configuration managment
+To check node health ( parameters of CPU, RAM, Diskspace from bulk servers to alert the emails for server health.
+
+>nproc  for listings of CPU's
+>Top command for the CPU
+>free command for the memory used, using, free
+>df  and dnf ( to check disk space)
+
+
+
