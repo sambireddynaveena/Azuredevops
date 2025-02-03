@@ -1,0 +1,5 @@
+Terraform: Iac tool ( which uses HCL) hashicorp configuration language or Json to define the infrastructure
+
+*** How Terraform is connecting or calling the cloud service( Azure, Aws, GCp..)***
+terraform is a API as a code, internally, through the providers, which we have mentioned in the Tf files, 
+which connectes the HCL providers/plugins through the various APIs, it connectes to cloud services. 
