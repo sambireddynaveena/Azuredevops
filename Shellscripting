@@ -28,6 +28,35 @@ To print the contents from the file
 >pwd (present working directory)
 >cd change directory
 >cd.. (back to the previous directory)
+
+you can write all the scripts inside of the one file
+#!bin/bash
+
+set -x ( # debug mode)
+set -e ( # exits when an error)
+set -o  (pipefail)
+
+(with only set -e  exists when an error, but continuous further, difficult to find out the error, we may miss that) if we dont use set -o
+
+Advantage of set -o, it will fail with the error, stops execution of remaining commands from the script file.
+
+
+>grep (search the keywords)
+
+> | pipe symbol for it gives output of first command to second command
+
+>awk commad of to get specified columns/specific patterns to get
+
+ex: ./filename.sh |grep naveena |awk "-F" '{print $2}'
+o/p:
+particular colum prints from the file
+
+
+we can use if and if else and two if conditions and for loop conditions
+from the script
+
+we can write the script for ci/cd pipeline configurations
+to restore
 >mkdir directoryname(create a new directory)
 >chmod 777 filename.sh  ( 4 2 1 ( 4 to read, 2 to write, 1 to execute)) chmod 444 filename...etc
 chmod xxx ( first x for permissions to owner, second X for permissions to group, third x for permissions to everyone)
