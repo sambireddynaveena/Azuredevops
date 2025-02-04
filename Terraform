@@ -3,3 +3,39 @@ Terraform: Iac tool ( which uses HCL) hashicorp configuration language or Json t
 *** How Terraform is connecting or calling the cloud service( Azure, Aws, GCp..)***
 terraform is a API as a code, internally, through the providers, which we have mentioned in the Tf files, 
 which connectes the HCL providers/plugins through the various APIs, it connectes to cloud services. 
+
+For AZure - ARM (json) which Azure resource manager understands
+For AWS - cloudformation
+For GCP- etc..their own template
+
+Wherever we are using multi cloud configuration, with the above, its difficult to use, so terraform is beneficial for highly available infrastructre.
+Competetor of terraform is Crossplane
+
+# HCL-----Azure API-----Connects cloud#
+        AWS API
+
+
+**** Why only terraform ***
+Multi cloud support
+Large Ecosystem
+State management
+Declarative syntax
+HCL
+Integrates with multiple tools
+Community support
+Execution plan
+
+
+common terms:
+Providers.tf
+main.tf
+variables.tf
+Terraform.tfvars
+statefile
+terraform.tfstate
+outputs.tf
+*** Remote backend ***
+** local backend **
+
+
+
