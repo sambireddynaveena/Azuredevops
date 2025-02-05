@@ -1,0 +1,39 @@
+## Network Foundation
+Vnet, 
+Private link
+Azure DNS
+Azure bastion
+Route server
+NAT gateway
+Traffic manager
+
+## Load balancing and content delivery
+Allow for managemnt, Distribution and optimaization of your applications and workloads
+
+Load balancer
+Application Gateway
+Azure Front Door
+
+## Hybrid connectivity
+Secure Communication to and from your resources to Azure
+VPN Gateway
+Expressroute
+Virtual WAN
+and peering service
+
+#Network security
+protect web applications and Iaas services from DDos attacks and malicious actors
+
+Firewall Manager
+Firewall
+Web application Firewall
+DDos Protection
+
+## Network Managment and monitoring
+Azure network managemnt and monitoring services provide tools to manager your network resources
+
+Azure monitor
+Network Watcher
+Azure Virtual network maanger
+
+
