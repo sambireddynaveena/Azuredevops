@@ -1,3 +1,7 @@
+## Need to know, what are the services from Network
+Description of those, How these services will interconnect and work together
+What are the best possibility ways, to utialize the services
+
 ## Network Foundation
 Vnet, 
 Private link
@@ -37,3 +41,76 @@ Network Watcher
 Azure Virtual network maanger
 
 
+
+OSI Model: ( open systems interconnection)
+
+7 Layers
+1. Application layer - computer-human interactions, where application access the network services
+2. Presentation layer - Where Data encryption occures, it ensures the data is in usable format
+3. Session Layer - Maintains connections, and is responsible for controlling ports and sessions
+4. Transport Layer - transmissing the data over TCP/UDP
+5. Network Layer - Decides which physical path data will take
+6. Data Link Layer - Decides the format of data in Network
+7. Physical Layer - transmits raw data bits stream over the Physical medium
+
+Notes in short-
+TCP  (Transmission control protocol) - Direct and orederd commnication with connectection oriented ( Works at Transport layer)
+UDP (User Datagram protocol)- Speed and connection less ( works at Transport layer)
+IP- Internet protocal - works at network layer - assigning unique IP addresses and maintains Routing tables
+It manages addressing and routing the data packets in network
+
+Ports:
+Ports are the communication endpoints it enables end to end communication from the devices
+
+20 &21 - File transfer protocol
+22 - SSH (secure shell)
+23 -  Telnet remote protocol (unsecure)
+25 - SMTP ( simple mail transfer protocol)
+53 - DNS service protocol
+80 - Http (hyper text transfer protocol)
+110 - POP3 ( post office protocol)
+123 - NTP ( Network TIme protocol)
+143 - IMAP ( internet message Access protocol)
+161-  SNMP ( Simple network managemnt protocol)
+443 - https( Hyper text transfer protocol)
+
+CIDR: Classless inter domain routing
+
+255.x.x.x/n
+Formula for number of IP's= 2^32-n
+Ex:
+ No.of Ips  Prefix  Subnet mask
+  1          /32     255.255.255.255
+  2          /31     255.255.255.254
+  4          /30     255.255.255.252
+  8          /29     255.255.255.248
+  16
+  32
+  64
+  128
+  256
+  512
+  1K
+  2K
+
+Routing is the process of directing data from Source to destination, Routers use 
+routing tables 
+protocols
+to transmitt the date  and ensuring efficient and reliable communication
+
+DNS:
+Domian name system, It translates Domain Names to computer freindly Ips and it helps to find mail servers, it balances web traffic, 
+among servers and redirect requests and reverse lookups and speeds up responses through caching
+
+VPN:
+Virtual private network
+It is secure tunnel, which helps encrypting the data over the public network
+while accessing Remote servers and cloud services, without compromising the data security and improve the security
+
+Network Foundation:
+Vnet: Private network
+which allow us to communicate b/e azure resources
+communicate between two virtual networks
+Communicate to the internet
+communicate with on-premises networks
+Encrypt traffic between resources
