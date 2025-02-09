@@ -114,3 +114,13 @@ communicate between two virtual networks
 Communicate to the internet
 communicate with on-premises networks
 Encrypt traffic between resources
+
+Ping - To find the reachability of a host in IP  ex: ping google.com
+Ipconfig/ifconfig - to find the configuration of a network interfaces ex: ipconfig
+nslookup in Windows/Host  in linux) - to query the Domain name system servers for domain information  ex: host google.com
+Dig - Domian information groper -TO query the domain name system servers for mail servers and host addreesess  Ex: Dig google.com
+Traceroute- To display the route and measure the transit delayes of packets across internet protocol network  ex: Traceroute google.com
+Netstat- to disaply the active network connections routing tables
+Nmap- To discover the hosts and services over a computer network
+TCpdump- To capture and analysis network traffic
+
