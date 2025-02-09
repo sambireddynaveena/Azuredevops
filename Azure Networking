@@ -124,3 +124,14 @@ Netstat- to disaply the active network connections routing tables
 Nmap- To discover the hosts and services over a computer network
 TCpdump- To capture and analysis network traffic
 
+NAT Gateway:
+Network Address Translation
+NAT gateway associated with the subnets ( create NAT gateway, in VPN, goto subnetes, click on it, apply the NAT gateway attach to it)
+Whatever the Instances were in in VPN/VPC has the private internet IP address, which translated into the public IP, 
+by without exposing oer a internet to avoid potential risks.
+
+// A NAT gateway is a Network Address Translation (NAT) service.
+You can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC 
+but external services cannot initiate a connection with those instances.
+
+it increases the security
