@@ -1,0 +1,143 @@
+What are containers
+What is Docker
+Why we need Docker /Advanatages of containaraization
+Docker commands
+How to run the Docker
+Networks in Docker
+Docker compose
+Docker concepts in Depth
+Docker Swarm
+Docker vs Kubernetes
+
+
+Why do we need Docker:
+When we have a requirement to build end to end application by using all the tools
+
+Nodejs for web server   MongoDb for Database   Message broker like Redis  Ansible for orchestration
+
+these all will take diffrent libraries, Dependencies and OS, it would be complicate to build End to end systems
+one service supports one thing, and its may not compatible for other service
+
+We get compatability issues
+Long setup time
+Different Dev/stage/prod environments
+
+When new Developer joins, to understand all will difficult,
+so Docker helps to containarize each service in one container, Each container has its own Libraries & dependencies
+
+** Docker helps, to containaraize the applications , and each container has its own dependencies and libraries. and all will share same Harwadre/kernal
+and OS **
+We need to make sure, whether Docker hosted or not to containaraize them.
+
+** What are containers **
+Containers are completely isolated, each has its own Processes, Networks, Volumes, its own Librariries, Dependencies.
+
+Difference between COntainers and VM's
+Containers    VM
+
+
+c1  c2  c3
+Docker           VM1  VM2  Each VM has OS and lib, Dependecnices so Disk size more, utilaization is high, highr cost, Docker comes into the picture now.
+  OS               Hypervisor
+Hardware infra      Hardware
+
+
+Container vs Image
+
+Node: Physical or Virtual machine, that runs workloads
+#Pod: Smallest Deployment Unit
+Container: package of application, portable package of software,lightweight , is an Intance to allow to run the Image
+( lightweight, Package of the software, it has everything to allow to run an application, Libraries, dependencies)
+Image: Package template plan# like vm tamplates
+
+Docker: grouping of containers, containaraization platform, it allow us to build and ship the application.
+
+
+Create a VM, connect to it, install Docker.
+Remove previous installations
+Sudo docker remove get Docker docs informatiom
+
+install Docker with certain commands.
+States of a Docker: creating, Running, Paused, Restarting, Exited, Dead.
+
+Few of Basic coammnds:
+Docker run container name or image name  ---To start a container.
+Docker ps -a  ---list all the containers ( including Running and not running)
+Docker PS ----List running containers
+Ex: Docker run redis/ubuntu/alpine
+Docker stop container
+*** Before removing a container, we need to stop the container, then remove it **
+
+Docker rm container name/container ID
+Docker rmi Image
+
+docker run redis sleep 5 ----Append a command
+Docker exec <container-name> cat /etc/hosts   ---execute the command
+docker run container-name---> Docker run -d conainer name ( detach)---docker attach container name
+
+
+Ex: docker run ubuntu  --> it will create a New latest image by default  (Tagging)
+when we want require version---> Docker run ubuntu:4.0   -- run 4.0 versions
+
+Port mapping   ---- docker run -p external port/Docker host port: internal port number/container port container name
+ex: Docker run -p  80:5000 mysql
+
+Volume mount:
+Docker run -v external directory path: internal directory path container name
+
+To fetch the details of container
+docker inspect container name
+
+TO find the logs
+docker logs container name
+
+docker run -p 8080:8080 -v external path:internal path image name
+
+Docker run -p host port:container port container name:color
+
+
+
+**How we are containaraizing the application **
+How we can create own image
+
+1. Base image                                                           Dockerfile// From Ubuntu
+2. update with apt repo                                                              Run apt-get update
+3. install dependencies using apt                                                    Run apt-get install python
+4. install all the dependencies with the pip commands for python                   Run pip install flask  --Run pip install flask my-sql
+5.copy the source code                                                             copy sourcecode ./directory /path name
+5. execute with entrypoint                                                         Entrypoint flask
+
+**How do I create my Own Image**
+docker build Dockerfile -t application name/custom-app
+
+Docker push application name/custom app
+
+
+Dockerfile---Instaruction   Argument method
+it will instruct, it will create a layer
+
+
+TO open the file
+vi /root/Docker file-name/Dockerfile
+
+---we can see version and directory
+
+To fetch the versions and data
+docker run image name cat /etc/*release*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
