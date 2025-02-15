@@ -125,6 +125,14 @@ vi /root/Docker file-name/Dockerfile
 To fetch the versions and data
 docker run image name cat /etc/*release*
 
+CMD vs ENTRYPOINT
+
+CMD Job is used to pass the arguments, Where Entrypoint Instructions or appended and addded all together to execute.
+CMD commands are ignored by Daemon.
+
+CMD Arguments can be overridden
+ENTRYPOINT cannot be overridden
+
 
 
 
