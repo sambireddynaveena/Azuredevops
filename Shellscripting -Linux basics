@@ -6,10 +6,52 @@ login to the VM(linux or windows or ubuntu...)
 basic shell commands
 >ls  (list all the files from the server)
 >man ls (it shows the command information, when we enter man)
+
+> tree directory path ( it shows, number of directorys and number of files)
+
+copy target file into target directory
+>cp -v  tragetfile  targetdirectory --copy targetfile into target directory
+>cp -r source directory target location  --copy source directory to target location
+>rm directory name  ---cannot remove directory with rm command
+>rm directory/filename  --remove filename
+>rm -r directoryname ----remove directory
+
+
+>whoami  (who logged in as a user)
+>id  (prints userid, group id)
+>su   ---switch user
+>ssh user@ipaddress
+>sudo ls /root/   ---list files from the root user account
+>curl/wget  ---for downloading the file
+
+> /etc/*release*  to find the Os version
+>cat /etc/centos-release  to find OS version on server
+
+**Package managemnt**  In devops, we use Web servers & Data servers, other Devops tools use packages to install the dependencies.
+RPM   --Redhat package manager
+>rpm -i package name  ---->install package
+>rpm -e package name  --> uninstall
+>rpm -q package name  --> Query a package
+
+instead of using rpm, if we use YUM  , it will install all the required its dependencises from the centralaised repository
+
+>yum list ansible  -->list all the installed packages
+>yum remove ansible  -->
+>
+
+
+
 >touch examplefile.sh (creates a file)
 >vim exapmlefile2.sh(vi or vim command helps to create and open the file)
 where we can write up script in the file
 after opening
+> cat file_name  --- prints the file
+> cat >file_name  -- Adding contents into the file ....to exit ctrl+D
+ Ctrl+D  to exit
+> cp sourcefile destination file ---copy the files from source to destination
+>mv sourcefile destination file  ---move the files from from source to destination
+
+
 
 #!bin/bash (shebang)
                  { #!bin/bash or #!bin/sh or #!bin/ksh or #!bin/dash
@@ -28,6 +70,19 @@ To print the contents from the file
 >pwd (present working directory)
 >cd change directory
 >cd.. (back to the previous directory)
+
+/tmp/var/naveena/pythonapp
+
+to create directory, we need to write thrice of mkdir..
+>mkdir /tmp/var
+>mkdir /tmp/var/naveena
+>mkdir /tmp/var/naveena/pythonapp
+
+instead of that, we can use >mkdir -p /tmp/var/naveena/pythonapp
+
+>rm -r directoryname  ---to remove directory
+>cp -r source directory  destination directory
+
 
 you can write all the scripts inside of the one file
 #!bin/bash
