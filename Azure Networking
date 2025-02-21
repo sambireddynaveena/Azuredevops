@@ -37,12 +37,24 @@ Through route tables we need to add
 **DNS**
 >ping db   ---if we dont assign any domain name to the host, it wont access
 to update the Domain name to the ipaddress
->cat >>/etc/hpsts
+>cat >>/etc/hosts
 >ping db
 
+Name resolution for Ip address.
+>cat >>/etc/hosts   --- to assign the domain name to Ip address to host
+assigning no.of Ip addresses to each domain is difficult, so, we do have DNS server  --->Domain name server
+all the list od ip address for Domain names will be listed.
+we do have local DNS server, it is fact through Cache in response, for we do have Root DNS server
+www. google.com
+.    is for route
+.com  ----- top level domain
+google  --domain
+www ----sub level domain  with maos and drive..etc
 
 
-
+.com, .in, .edu, .org......etc
+>>sudo vi /etc/hosts  to open the file to modify
+>>cat /etc/resolv.config
 
 
 
