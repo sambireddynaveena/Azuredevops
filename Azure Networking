@@ -1,3 +1,53 @@
+Before Jump into the Networking topics, need to understand, Basic network concepts,
+
+Switches
+Routers
+Default gateway
+
+1. How the Devices will communicate each other within the same Network ( thorugh Switches)/If its different network/through Router
+2. Two Devices within the network has Network Interface, through that, we can add/link IP address to the devices    (commnand >ip link) (> ip addr add 192.162.1.1)
+3. Through Switch, we can enable the Network.
+4. if its Different Network ---> thats where Routers comein ( it is a intelligent device, its connected to multiple ports for network devices)
+5. Router is a Physical server, many Routers on Network,    question is, if there are multiple Routers, how Different networks are communicating
+its just a device for particular other network
+** Default Gateway**
+6. Here Routing is important, Gateway**, We are enabling the routetables and adding the Gate to the Network ( ** door to the Network**)
+> route  ---we can check the routing tables assigned over a Network to connect the specified network
+>ip route add 192.168.1.10/24 via 192.168.2.0 ( addigng the n/w to another network)
+
+default Gateway 0.0.0.0
+we can add other specificed Internal private networks, to enable the communication through Route.
+we can troubleshoot issues easily with this.
+                      192.168.1.0 n/w                                                                  192.168.2.0 n/w
+A N/w--192.168.1.5  -------------------- 192.168.1.6 B Network 192.168.2.6 ( Two Interfaces so Two Ips)------------------C Network 192.168.2.5
+If A wants to connect C host, through B N/w, what can be done
+Through route tables we need to add
+>ip route add 192.168.2.0/24 via 192.168.1.6
+>ip route add 192.168.1.0/24 via 192.168.2.6
+
+
+>ip link   --list and modify the interfaces on the host
+>ip addr ---to see the assigned IP address on host
+>ip addr add 192.168.1.0/24 dev etho  --to add ip address to the interface
+>route   --list routing table
+>ip route --to update the routing tables
+>cat /proc/sys/net/ipv4/ip_forward  -----command to check ip_forwarding is enabled or not on a host configured as a router
+1
+
+**DNS**
+>ping db   ---if we dont assign any domain name to the host, it wont access
+to update the Domain name to the ipaddress
+>cat >>/etc/hpsts
+>ping db
+
+
+
+
+
+
+
+
+
 ## Need to know, what are the services from Network
 Description of those, How these services will interconnect and work together
 What are the best possibility ways, to utialize the services
