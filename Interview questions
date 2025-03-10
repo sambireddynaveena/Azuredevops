@@ -1,6 +1,7 @@
 Azure Fundamentals:
 
 What is Azure Bastion?
+what is Availability set and avaibility Zone?
 
 What is Application Gateway and NAT Gateway
 
@@ -38,6 +39,7 @@ difference between CMD and Entrypoint
 Kuberenetes
 
 Difference between monolithic and microservices
+How you do Node image upgrades in K8's?
 
 What is deployment and namespaces,Daemonsets, Cronjobs
 
