@@ -1,3 +1,33 @@
 CI/CD pipeline
 Compiling the code--->integrating security tool to anlayze the vulnerabilities---->Generateg a new image from the code with the Docker
 ---generating artifacts---> Deploying the code with various methods.
+
+Sonarqube:
+Code Quality check tool - Bugs, Code Smells, Vulnerabilities. { With the help of reporting tool, we can observe which part of code
+has vulnerabilities} Which helps to fix the issue for developers.
+
+Security Analysis tool
+code coverage --- we will write test cases for the source code, how much its cobered--if its 80% (amount of code covered during test cases)
+--->then we are good.
+Third party tool - Jacoco, we integrate this third party tool to the SonarQube to check code coverage.
+
+
+1. Create a Jenkins server Ec2/VM instance
+2. Install GIT in the server
+3. Integrate Github with Jenkins GUI to pull the code from Github
+4. Install Docker in the sonarqube server
+5. run command docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
+
+-d means: run the logs in baground
+-p means : port number  container Host port: container port
+image: image name
+
+server ip address: container host port number to access the sonarqube URL
+6. add sonarqube plugin to jenkins
+7.configure it, manage credentials, with the Token generation.
+8. add the Token to the Jenkins pipeline
+9. Add Jacoco plugin file to the pipeline in pom.xml file
+checkout---compile--run test cases--sonarqube analysis
+10. Sonarqube has rules for each programming, with these rules, it scans the bugs, code smells, Vulnerabilities
+11.we can add custom rules, if we need to scan additional
+
