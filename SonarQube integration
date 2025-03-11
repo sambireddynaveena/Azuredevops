@@ -1,1 +1,3 @@
-
+CI/CD pipeline
+Compiling the code--->integrating security tool to anlayze the vulnerabilities---->Generateg a new image from the code with the Docker
+---generating artifacts---> Deploying the code with various methods.
