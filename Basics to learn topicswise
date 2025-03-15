@@ -12,3 +12,22 @@ Terraform
 Monitoring (Logs, events, Metrics)
 Python Scripting
 AIops
+
+
+Azure Basic terminology and its overview:
+** Azure bastion service **
+It provides the Secure and seamless connection for remotely connected servers through RDP and SSH with the private Ip address.
+It places, inside of Virtual Netwrok, We will create Azure Bastion service inside VNET.
+So that, RDP (3389)/SSH(22) inside VM's of VNET, do not expose its public Ip address thorugh the Azure Bastion Service.
+It will stop exposing the port's for the outside network.
+
+1. Create a VNET
+2. Create a Azure Bastion Subnet inside of VNET
+3. Create a Azure Bastion service in portal and add VNET and its specified subnet.
+4. Disscociate the public IP of VM.
+5. Connect VM's through the Azure Bastion service, so we can connect VM's Security with private Ip address through Azure Bastion service.
+
+Private LINK:
+
+
+
