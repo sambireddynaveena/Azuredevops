@@ -1,0 +1,199 @@
+Before Jump into the Networking topics, need to understand, Basic network concepts,
+
+Switches
+Routers
+Default gateway
+
+1. How the Devices will communicate each other within the same Network ( thorugh Switches)/If its different network/through Router
+2. Two Devices within the network has Network Interface, through that, we can add/link IP address to the devices    (commnand >ip link) (> ip addr add 192.162.1.1)
+3. Through Switch, we can enable the Network.
+4. if its Different Network ---> thats where Routers comein ( it is a intelligent device, its connected to multiple ports for network devices)
+5. Router is a Physical server, many Routers on Network,    question is, if there are multiple Routers, how Different networks are communicating
+its just a device for particular other network
+** Default Gateway**
+6. Here Routing is important, Gateway**, We are enabling the routetables and adding the Gate to the Network ( ** door to the Network**)
+> route  ---we can check the routing tables assigned over a Network to connect the specified network
+>ip route add 192.168.1.10/24 via 192.168.2.0 ( addigng the n/w to another network)
+
+default Gateway 0.0.0.0
+we can add other specificed Internal private networks, to enable the communication through Route.
+we can troubleshoot issues easily with this.
+                      192.168.1.0 n/w                                                                  192.168.2.0 n/w
+A N/w--192.168.1.5  -------------------- 192.168.1.6 B Network 192.168.2.6 ( Two Interfaces so Two Ips)------------------C Network 192.168.2.5
+If A wants to connect C host, through B N/w, what can be done
+Through route tables we need to add
+>ip route add 192.168.2.0/24 via 192.168.1.6
+>ip route add 192.168.1.0/24 via 192.168.2.6
+
+
+>ip link   --list and modify the interfaces on the host
+>ip addr ---to see the assigned IP address on host
+>ip addr add 192.168.1.0/24 dev etho  --to add ip address to the interface
+>route   --list routing table
+>ip route --to update the routing tables
+>cat /proc/sys/net/ipv4/ip_forward  -----command to check ip_forwarding is enabled or not on a host configured as a router
+1
+
+**DNS**
+>ping db   ---if we dont assign any domain name to the host, it wont access
+to update the Domain name to the ipaddress
+>cat >>/etc/hosts
+>ping db
+
+Name resolution for Ip address.
+>cat >>/etc/hosts   --- to assign the domain name to Ip address to host
+assigning no.of Ip addresses to each domain is difficult, so, we do have DNS server  --->Domain name server
+all the list od ip address for Domain names will be listed.
+we do have local DNS server, it is fact through Cache in response, for we do have Root DNS server
+www. google.com
+.    is for route
+.com  ----- top level domain
+google  --domain
+www ----sub level domain  with maos and drive..etc
+
+
+.com, .in, .edu, .org......etc
+>>sudo vi /etc/hosts  to open the file to modify
+>>cat /etc/resolv.config
+
+
+
+
+
+## Need to know, what are the services from Network
+Description of those, How these services will interconnect and work together
+What are the best possibility ways, to utialize the services
+
+## Network Foundation
+Vnet, 
+Private link
+Azure DNS
+Azure bastion
+Route server
+NAT gateway
+Traffic manager
+
+## Load balancing and content delivery
+Allow for managemnt, Distribution and optimaization of your applications and workloads
+
+Load balancer
+Application Gateway
+Azure Front Door
+
+## Hybrid connectivity
+Secure Communication to and from your resources to Azure
+VPN Gateway
+Expressroute
+Virtual WAN
+and peering service
+
+#Network security
+protect web applications and Iaas services from DDos attacks and malicious actors
+
+Firewall Manager
+Firewall
+Web application Firewall
+DDos Protection
+
+## Network Managment and monitoring
+Azure network managemnt and monitoring services provide tools to manager your network resources
+
+Azure monitor
+Network Watcher
+Azure Virtual network maanger
+
+
+
+OSI Model: ( open systems interconnection)
+
+7 Layers
+1. Application layer - computer-human interactions, where application access the network services
+2. Presentation layer - Where Data encryption occures, it ensures the data is in usable format
+3. Session Layer - Maintains connections, and is responsible for controlling ports and sessions
+4. Transport Layer - transmissing the data over TCP/UDP
+5. Network Layer - Decides which physical path data will take
+6. Data Link Layer - Decides the format of data in Network
+7. Physical Layer - transmits raw data bits stream over the Physical medium
+
+Notes in short-
+TCP  (Transmission control protocol) - Direct and orederd commnication with connectection oriented ( Works at Transport layer)
+UDP (User Datagram protocol)- Speed and connection less ( works at Transport layer)
+IP- Internet protocal - works at network layer - assigning unique IP addresses and maintains Routing tables
+It manages addressing and routing the data packets in network
+
+Ports:
+Ports are the communication endpoints it enables end to end communication from the devices
+
+20 &21 - File transfer protocol
+22 - SSH (secure shell)
+23 -  Telnet remote protocol (unsecure)
+25 - SMTP ( simple mail transfer protocol)
+53 - DNS service protocol
+80 - Http (hyper text transfer protocol)
+110 - POP3 ( post office protocol)
+123 - NTP ( Network TIme protocol)
+143 - IMAP ( internet message Access protocol)
+161-  SNMP ( Simple network managemnt protocol)
+443 - https( Hyper text transfer protocol)
+
+CIDR: Classless inter domain routing
+
+255.x.x.x/n
+Formula for number of IP's= 2^32-n
+Ex:
+ No.of Ips  Prefix  Subnet mask
+  1          /32     255.255.255.255
+  2          /31     255.255.255.254
+  4          /30     255.255.255.252
+  8          /29     255.255.255.248
+  16
+  32
+  64
+  128
+  256
+  512
+  1K
+  2K
+
+Routing is the process of directing data from Source to destination, Routers use 
+routing tables 
+protocols
+to transmitt the date  and ensuring efficient and reliable communication
+
+DNS:
+Domian name system, It translates Domain Names to computer freindly Ips and it helps to find mail servers, it balances web traffic, 
+among servers and redirect requests and reverse lookups and speeds up responses through caching
+
+VPN:
+Virtual private network
+It is secure tunnel, which helps encrypting the data over the public network
+while accessing Remote servers and cloud services, without compromising the data security and improve the security
+
+Network Foundation:
+Vnet: Private network
+which allow us to communicate b/e azure resources
+communicate between two virtual networks
+Communicate to the internet
+communicate with on-premises networks
+Encrypt traffic between resources
+
+Ping - To find the reachability of a host in IP  ex: ping google.com
+Ipconfig/ifconfig - to find the configuration of a network interfaces ex: ipconfig
+nslookup in Windows/Host  in linux) - to query the Domain name system servers for domain information  ex: host google.com
+Dig - Domian information groper -TO query the domain name system servers for mail servers and host addreesess  Ex: Dig google.com
+Traceroute- To display the route and measure the transit delayes of packets across internet protocol network  ex: Traceroute google.com
+Netstat- to disaply the active network connections routing tables
+Nmap- To discover the hosts and services over a computer network
+TCpdump- To capture and analysis network traffic
+
+NAT Gateway:
+Network Address Translation
+NAT gateway associated with the subnets ( create NAT gateway, in VPN, goto subnetes, click on it, apply the NAT gateway attach to it)
+Whatever the Instances were in in VPN/VPC has the private internet IP address, which translated into the public IP, 
+by without exposing oer a internet to avoid potential risks.
+
+// A NAT gateway is a Network Address Translation (NAT) service.
+You can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC 
+but external services cannot initiate a connection with those instances.
+
+it increases the security
